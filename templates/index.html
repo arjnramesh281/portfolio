@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Side Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for the side navbar */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2c3e50;
+            padding-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #fff;
+        }
+
+        .nav-link {
+            color: #ecf0f1;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #34495e;
+            color: #3498db;
+            padding-left: 25px;
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+        }
+
+        .active {
+            background-color: #34495e;
+            border-left: 4px solid #3498db;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        /* Hamburger menu for mobile */
+        .navbar-toggler {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="navbar-toggler btn btn-dark" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="" alt="Profile" class="profile-img">
+            <h4 class="text-white">Arjun Ramesh</h4>
+            <p class="text-white">Web Developer</p>
+        </div>
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#portfolio" class="nav-link">
+                    <i class="fas fa-briefcase"></i>Portfolio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">
+                    <i class="fas fa-cogs"></i>Skills
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>This is the main content area. Your portfolio content goes here.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <script>
+        // Toggle sidebar on mobile
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
