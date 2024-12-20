@@ -1,0 +1,117 @@
+/* Custom CSS for the side navbar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:bisque;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+}
+
+.nav-link {
+    color: #0d0d0d;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #77797a;
+    padding-left: 25px;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.active {
+    background-color: #34495e;
+    border-left: 4px solid #3498db;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 0px 2px;
+}
+
+/* Hamburger menu for mobile */
+.navbar-toggler {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+
+
+
+.home{
+    text-align: center;
+    height: 100vh;
+    background-color: bisque;
+}
+
+.about{
+    text-align: center;
+    height: 100vh;
+    background-color: bisque;
+}
+
+.portfolio{
+    text-align: center;
+    height: 100vh;
+    background-color: bisque;
+}
+.skill{
+    text-align: center;
+    height: 100vh;
+    background-color: bisque;
+}
+
+.contact{
+    text-align: center;
+    height: 100vh;
+    background-color: bisque;
+}
+
+
+
+
+
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
